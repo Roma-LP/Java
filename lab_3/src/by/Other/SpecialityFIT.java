@@ -5,7 +5,7 @@ public enum SpecialityFIT {
     POIBM,
     DESIGN,
     ISIT,
-    POIT;
+    POIT,
 
 
 }

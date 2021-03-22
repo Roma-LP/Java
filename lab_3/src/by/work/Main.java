@@ -6,11 +6,29 @@ import by.faculty.Faculty;
 import by.university.People;
 import by.university.Student;
 
+import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class Main {
 
+    static Logger LOGGER;
+   /* static {
+        try(FileInputStream ins = new FileInputStream("C:\\БГТУ\\СТПвInternet\\lab_3\\lib")){ //полный путь до файла с конфигами
+            LogManager.getLogManager().readConfiguration(ins);
+            LOGGER = Logger.getLogger(Main.class.getName());
+        }catch (Exception ignore){
+            ignore.printStackTrace();
+        }
+    }*/
+
     public static void main(String[] args) {
+
+
+      //  LOGGER.log(Level.INFO,"Начало main, создаем лист");
+
 	People IvanIvanov = new People("Ivan","Ivanov",19,true);
 	People VasaVasiliev = new People("Vasa","Vasiliev",24,true);
 	People PetyaPetrov = new People("Petya","Petrov",17,true);
@@ -86,5 +104,6 @@ public class Main {
         System.out.println(dekan.getFaculty());
         dekan.SortStudentByNameCourse();
         System.out.println(dekan.getFaculty());
+
     }
 }
